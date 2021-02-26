@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- React 的核心库 -->
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <!-- 提供操作 DOM 的 react 扩展库 -->
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <!-- 解析 JSX 语法代码转为纯 JS 语法代码的库,生产环境中不建议使用 -->
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+  </head>
+  <body></body>
+    <div id="test"></div>
+    <!-- script的类型必须是text/babel -->
+    <script type="text/babel">
+      // 创建虚拟dom元素
+      const vDom = <h1>Hello React</h1> // jsx语法，不要加引号
+      // 创建虚拟dom法2
+      // const vDom = React.creatElement('h1', {id: 'myTiyle'}, hello)
+
+      // 渲染虚拟dom到页面真实dom容器中
+      // ReactDOM.render 是 React 的最基本方法用于将模板转为 HTML 语言，并插入指定的 DOM 节点。
+      ReactDOM.render(vDom, document.getElementById('test'))
+
+    </script>
+  </body>
+</html>
